@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --remove .nonexistent",
     "git:save": "git add . && git commit -m \"feat: update app\"",
     "git:push": "git push origin main",
     "publish:app": "npm run git:save && npm run git:push && npm run deploy"
